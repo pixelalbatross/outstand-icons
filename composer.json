@@ -1,0 +1,49 @@
+{
+  "name": "pixelalbatross/outstand-icons",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Sérgio Santos",
+      "homepage": "https://s3rgiosan.dev"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Outstand\\WP\\Icons\\": "includes/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Outstand\\WP\\Icons\\Tests\\Unit\\": "tests/php/unit/"
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "yahnis-elsts/plugin-update-checker": "^5.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.6",
+    "pixelalbatross/coding-standards": "dev-main",
+    "yoast/phpunit-polyfills": "^1.1"
+  },
+  "scripts": {
+    "lint": "phpcs .",
+    "lint-fix": "phpcbf .",
+    "test": "phpunit"
+  },
+  "extra": {
+    "installer-name": "outstand-icons"
+  },
+  "config": {
+    "platform": {
+      "php": "8.2"
+    },
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/installers": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "optimize-autoloader": true
+  }
+}

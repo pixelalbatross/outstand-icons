@@ -1,0 +1,33 @@
+.os-icons-picker {
+	min-width: 320px;
+	padding: 12px;
+}
+
+.os-icons-picker__grid {
+	display: grid;
+	grid-template-columns: repeat( 6, 1fr );
+	gap: 4px;
+	max-height: 320px;
+	overflow-y: auto;
+	margin-top: 8px;
+}
+
+.os-icons-picker__tile {
+	width: 100%;
+	aspect-ratio: 1;
+	padding: 0;
+}
+
+.os-icons-picker__preview {
+	display: inline-flex;
+	width: 24px;
+	height: 24px;
+	align-items: center;
+	justify-content: center;
+}
+
+.os-icons-picker__preview svg {
+	width: 100%;
+	height: 100%;
+	fill: currentColor;
+}
