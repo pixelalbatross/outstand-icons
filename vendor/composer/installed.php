@@ -1,19 +1,19 @@
 <?php return array(
     'root' => array(
-        'name' => 'pixelalbatross/outstand-icons',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'name' => 'outstand/icons',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '0d287f3e03a82ef41d7311fa1a3c3a246a9dc773',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => false,
     ),
     'versions' => array(
-        'pixelalbatross/outstand-icons' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+        'outstand/icons' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '0d287f3e03a82ef41d7311fa1a3c3a246a9dc773',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
