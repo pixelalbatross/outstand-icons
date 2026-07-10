@@ -8,7 +8,7 @@ import Edit from './edit';
  *
  * @type {string}
  */
-export const FORMAT_NAME = 'os-icons/inline-icon';
+export const FORMAT_NAME = 'outstand/inline-icon';
 
 /**
  * Rich-text format config.

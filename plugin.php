@@ -6,7 +6,7 @@
  * Plugin URI:        https://outstand.site/?utm_source=wp-plugins&utm_medium=outstand-icons&utm_campaign=plugin-uri
  * Requires at least: 7.0
  * Requires PHP:      8.2
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Outstand
  * Author URI:        https://outstand.site/?utm_source=wp-plugins&utm_medium=outstand-icons&utm_campaign=author-uri
  * License:           GPL-3.0-or-later
@@ -26,24 +26,26 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'OS_ICONS_VERSION', '1.0.0' );
-define( 'OS_ICONS_BASENAME', plugin_basename( __FILE__ ) );
-define( 'OS_ICONS_URL', plugin_dir_url( __FILE__ ) );
-define( 'OS_ICONS_PATH', plugin_dir_path( __FILE__ ) );
-define( 'OS_ICONS_DIST_URL', OS_ICONS_URL . 'build/' );
-define( 'OS_ICONS_DIST_PATH', OS_ICONS_PATH . 'build/' );
+define( 'OUTSTAND_ICONS_VERSION', '1.0.1' );
+define( 'OUTSTAND_ICONS_BASENAME', plugin_basename( __FILE__ ) );
+define( 'OUTSTAND_ICONS_URL', plugin_dir_url( __FILE__ ) );
+define( 'OUTSTAND_ICONS_PATH', plugin_dir_path( __FILE__ ) );
+define( 'OUTSTAND_ICONS_DIST_URL', OUTSTAND_ICONS_URL . 'build/' );
+define( 'OUTSTAND_ICONS_DIST_PATH', OUTSTAND_ICONS_PATH . 'build/' );
 
-if ( ! file_exists( OS_ICONS_PATH . 'vendor/autoload.php' ) ) {
+if ( ! file_exists( OUTSTAND_ICONS_PATH . 'vendor/autoload.php' ) ) {
 	return;
 }
 
-require_once OS_ICONS_PATH . 'vendor/autoload.php';
+require_once OUTSTAND_ICONS_PATH . 'vendor/autoload.php';
 
-PucFactory::buildUpdateChecker(
-	'https://github.com/pixelalbatross/outstand-icons/',
-	__FILE__,
-	'outstand-icons'
-)->setBranch( 'main' );
+if ( class_exists( PucFactory::class ) ) {
+	PucFactory::buildUpdateChecker(
+		'https://github.com/pixelalbatross/outstand-icons/',
+		__FILE__,
+		'outstand-icons'
+	)->setBranch( 'main' );
+}
 
 /**
  * Load the plugin.

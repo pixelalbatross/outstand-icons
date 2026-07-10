@@ -42,7 +42,7 @@ composer require outstand/icons
 
 ## Requirements
 
-- WordPress 7.0 or higher
+- WordPress 7.0 or higher — required for the `WP_Icons_Registry` API used to render registered SVGs
 - PHP 8.2 or higher
 
 ### Tests
